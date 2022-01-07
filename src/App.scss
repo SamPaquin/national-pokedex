@@ -1,0 +1,400 @@
+// Colors
+
+$red: #dc0a2d;
+$blue: #28aafd;
+$green: #51ae5f;
+$yellow: #ffe022;
+$black: #232323;
+$white: #dedede;
+
+// Global Styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// App Styles
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $black;
+}
+
+.App h1 {
+    margin-bottom: 50px;
+    color: $yellow;
+    text-shadow: -1px 0 $blue, 0 1px $blue, 1px 0 $blue, 0 -1px $blue;
+    font-size: 70px;
+}
+
+.pokedex {
+  display: flex;
+  align-items: flex-end;
+  height: 800px;
+  width: 1200px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  border-radius: 8px 8px 0 8px;
+  background-color: $red;
+}
+
+// Top Left Lights
+
+.left-lights {
+  display: flex;
+  align-self: flex-start;
+}
+
+.blue-light-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  width: 110px;
+  margin-left: 40px;
+  border: 1px solid $black;
+  border-radius: 50%;
+  background-color: $white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.blue-light {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: $blue;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.ryg-lights {
+  display: flex;
+  justify-content: space-around;
+  width: 140px;
+}
+
+.red-light,
+.yellow-light,
+.green-light {
+  height: 20px;
+  width: 20px;
+  border: 1px solid $black;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.red-light {
+  background-color: $red;
+}
+
+.yellow-light {
+  background-color: $yellow;
+}
+
+.green-light {
+  background-color: $green;
+}
+
+// Main Screen on Left Side
+
+.pokemon-screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 550px;
+  margin: 40px 0;
+  border-radius: 8px 8px 8px 50px;
+  background-color: $white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.pokemon-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 85%;
+  border-radius: 8px;
+  background-color: $black;
+}
+
+.pokemon-screen img {
+  margin-top: -30px;
+  width: 60%;
+}
+
+// Bottom-Left Buttons
+
+.left-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.black-circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: $black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.left-middle-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-middle-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.red-button,
+.blue-button {
+  height: 10px;
+  width: 80px;
+  margin-bottom: 20px;
+  border: 1px solid $black;
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.red-button {
+  background-color: $red;
+}
+
+.blue-button {
+  background-color: $blue;
+}
+
+.green-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 200px;
+  border: 1px solid $black;
+  border-radius: 4px;
+  background-color: $green;
+}
+
+.green-screen p {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.black-plus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.black-plus {
+  background: $black;
+  height: 120px;
+  position: relative;
+  width: 40px;
+  border-radius: 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.black-plus:after {
+  background: $black;
+  content: "";
+  height: 40px;
+  left: -40px;
+  position: absolute;
+  top: 40px;
+  width: 120px;
+  border-radius: 6px;
+}
+
+// Middle Section of Pokedex
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
+    width: 60px;
+    background-color: $red;
+    border: 1px solid $black;
+}
+
+.line1,
+.line2 {
+    height: 4px;
+    width: 100%;
+    background-color: $black;
+}
+
+.line1 {
+    margin-bottom: 500px;
+}
+
+// Right Side of Pokedex
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 50%;
+  border-radius: 0 8px 8px 0;
+  background-color: $red;
+}
+
+.info-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  border-radius: 6px;
+  width: 80%;
+  height: 150px;
+  padding: 10px 0;
+  color: $white;
+  font-size: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.name-number {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  text-transform: capitalize;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.info-stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.info,
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-transform: capitalize;
+}
+
+.right-middle-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 470px;
+}
+
+.blue-charger {
+    display: flex;
+    flex-wrap: wrap;
+    width: 464px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin: 20px 0 10px 0;
+}
+
+.blue-square {
+    height: 60px;
+    width: 90px;
+    background-color: $blue;
+    border: 1px solid $black;
+}
+
+.black-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    width: 210px;
+    margin: 10px 0;
+}
+
+.black-button {
+    height: 10px;
+    width: 90px;
+    background-color: $black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.right-middle-bottom-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.white-button-container {
+    display: flex;
+}
+
+.white-button {
+    height: 70px;
+    width: 100px;
+    border: 1px solid $black;
+    background-color: $white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.yellow-button {
+    height: 80px;
+    width: 80px;
+    border: 1px solid $black;
+    border-radius: 50%;
+    background-color: $yellow;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.bottom-input {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.bottom-input input,
+.bottom-input button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70px;
+    width: 220px;
+    border: none;
+    border-radius: 6px;
+    background-color: $black;
+    color: $white;
+    font-size: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.bottom-input button:hover {
+    cursor: pointer;
+}
